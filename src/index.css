@@ -120,3 +120,80 @@ body {
   cursor: pointer;
   font-size: 48px;
 }
+
+
+@media only screen and (max-width: 768px) {
+  .board{
+    width: fit-content;
+    margin: 80px auto;
+    margin-left: 30px;
+    text-align: center;
+  }
+  
+  .board .game{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+
+  .turn .square,
+  .winner .square{
+    width: 50px;
+    height: 50px;
+    pointer-events: none;
+    border-color: transparent;
+  }
+  
+  .square{
+    width: 50px;
+    height: 50px;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    font-size: 48px;
+  }
+}
+/* galaxy Z flod 5 */
+@media only screen and (max-width: 412px) {
+  .board{
+    width: fit-content;
+    margin: 80px auto;
+    margin-left: 5px;
+    text-align: center;
+  }
+  
+  .board .game{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+  
+  .square{
+    width: 40px;
+    height: 40px;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    font-size: 22px;
+  }
+}
+
+
+/* Móviles en modo retrato */
+@media only screen and (max-width: 480px) {
+  /* CSS para dispositivos con un ancho máximo de 480px */
+}
+
+/* Móviles en modo paisaje y tabletas pequeñas */
+@media only screen and (max-width: 768px) {
+  /* CSS para dispositivos con un ancho máximo de 768px */
+}
+
+/* Tabletas en modo retrato */
+@media only screen and (max-width: 1024px) {
+  /* CSS para dispositivos con un ancho máximo de 1024px */
+}
