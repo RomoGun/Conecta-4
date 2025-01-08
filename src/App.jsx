@@ -9,8 +9,8 @@ import { BoardState, TurnState } from './logic/Estados/States';
 
 
   function App() {
-  const [Board, setBoard] = useState(BoardState);
-  const [Turn, setTurn] = useState(TurnState);
+  const [Board, setBoard] = useState(Array(42).fill(null));
+  const [Turn, setTurn] = useState(TURNS.X);
   const [Winner, setWinner] = useState(null);
   // const Habilitados = [];
 
@@ -54,7 +54,11 @@ import { BoardState, TurnState } from './logic/Estados/States';
   }
 
   useEffect(() => {
-   console.log('this is the end');
+  //  console.log('this is the end');
+  const boardFromStorage = window.localStorage.getItem('Board');
+  const turnFromStorage = window.localStorage.getItem('Turn');
+  setBoard(boardFromStorage ? JSON.parse(boardFromStorage) : Array(42).fill(null));
+  setTurn(turnFromStorage ?? TURNS.X);//el doble ? es para identificar si la variable viene nula o indefinida
   },[Winner])
   
 
